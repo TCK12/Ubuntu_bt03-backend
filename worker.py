@@ -53,8 +53,8 @@ dtype = torch.float16 if device == "cuda" else "float32"
 
 pipeline = AutoPipelineForText2Image.from_pretrained(
     MODEL_ID, 
-    torch_dtype=dtype, 
-    use_safetensors=True
+    use_safetensors=False,
+    torch_dtype=dtype,
 ).to(device)
 
 if device == "cuda":
