@@ -13,8 +13,8 @@ from diffusers import AutoPipelineForText2Image
 # ==========================================
 # 1. CẤU HÌNH CÁ NHÂN HÓA 
 # ==========================================
-MODEL_ID = "SimianLuo/LCM_Dreamshaper_v7" 
-AI_CODE = "2.1" 
+MODEL_ID = "runwayml/stable-diffusion-v1-5" 
+AI_CODE = "1.1" 
 
 # ==========================================
 # 2. CẤU HÌNH KẾT NỐI
