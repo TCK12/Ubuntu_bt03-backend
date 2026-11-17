@@ -13,13 +13,13 @@ from diffusers import AutoPipelineForText2Image
 # ==========================================
 # 1. CẤU HÌNH CÁ NHÂN HÓA 
 # ==========================================
-MODEL_ID = "thay-bang-model-cua-ban" 
-AI_CODE = "1.1" 
+MODEL_ID = "SimianLuo/LCM_Dreamshaper_v7" 
+AI_CODE = "2.1" 
 
 # ==========================================
 # 2. CẤU HÌNH KẾT NỐI
 # ==========================================
-SERVER_IP = "100.94.125.104"
+SERVER_IP = "100.113.32.121"
 REDIS_HOST = SERVER_IP
 MINIO_ENDPOINT = f"{SERVER_IP}:9000"
 BACKEND_API_URL = f"http://{SERVER_IP}:8000/api/images"
@@ -54,7 +54,7 @@ dtype = torch.float16 if device == "cuda" else "float32"
 pipeline = AutoPipelineForText2Image.from_pretrained(
     MODEL_ID, 
     use_safetensors=False,
-    torch_dtype=dtype,
+    torch_dtype=torch.float16
 ).to(device)
 
 if device == "cuda":
